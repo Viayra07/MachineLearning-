@@ -1,0 +1,17 @@
+from sklearn import tree
+
+X = [[180, 80, 44], [177, 70, 43], [185, 90, 46], [176, 74, 40], [165, 69, 39], [185, 90, 46],
+     [190, 94, 47], [166, 50, 38], [160, 60, 32], [187, 90, 43], [181, 88, 44], [170, 70, 43]]
+
+Y = ['male', 'male', 'male', 'female', 'female', 'male', 'male', 'female', 'female', 'male',
+     'male', 'female']
+
+#clf = tree.DecisionTreeClassifier()
+clf = tree.ExtraTreeClassifier()
+
+clf = clf.fit(X, Y)
+
+prediction = clf.predict([[190, 80, 44]])
+
+print(prediction)
+
